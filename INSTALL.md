@@ -1,3 +1,5 @@
+TODO: I've used btrfs, this page should be updated for my setup...
+
 The following is a brief installation tutorial for [Arch Linux][1]. It assumes
 familiarity with the Arch [Beginner's Guide][2] and [Installation Guide][3].
 
@@ -79,8 +81,7 @@ Optionally [edit the mirror list][9].
 
 Install the [base system][10].
 
-    $ pacstrap -i /mnt base base-devel net-tools wireless_tools dialog wpa_supplicant git grub ansible
-    (UEFI mode) $ pacstrap /mnt efibootmgr
+    $ pacstrap -i /mnt base base-devel iw wpa_supplicant git ansible btrfs-progs
 
 Generate and verify [fstab][11].
 
@@ -94,7 +95,7 @@ Change root into the base install and perform [base configuration tasks][12].
     $ locale-gen
     $ echo LANG=en_US.UTF-8 > /etc/locale.conf
     $ export LANG=en_US.UTF-8
-    $ ln -s /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
+    $ ln -secho LANG=en_US.UTF-8 > /etc/locale.conf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
     $ hwclock --systohc --utc
     $ echo mymachine > /etc/hostname
     $ systemctl enable dhcpcd.service
