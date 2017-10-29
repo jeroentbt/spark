@@ -5,6 +5,8 @@
 root ALL=(ALL) ALL
 
 %wheel ALL=(ALL) ALL
-{% for entry in passwordless_sudo %}
-%wheel ALL=(ALL) NOPASSWD:{{ entry }}
-{% endfor %}
+{%- if passwordless_sudo is defined -%}
+   {%- for entry in passwordless_sudo -%}
+      %wheel ALL=(ALL) NOPASSWD:{{ entry }}
+  {%- endfor -%}
+{%- endif -%}  

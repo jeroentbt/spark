@@ -2,7 +2,7 @@ user:
     name: jeroen
     uid: 1000
     group: jeroen
-    shell: /usr/bin/zsh
+    shell: /bin/bash
     email:  jeroen@mailbox.org
     log:
         dir: log
@@ -12,10 +12,10 @@ hostname: ein
 
 ########################################
 
-dotfiles:
-    url: git@github.com:pigmonkey/dotfiles.git
-    destination: projects/dotfiles
-    rcup_flags: -fx README.md
+# dotfiles:
+#     url: git@github.com:pigmonkey/dotfiles.git
+#     destination: projects/dotfiles
+#     rcup_flags: -fx README.md
 
 aur:
     dir: aur
@@ -26,42 +26,42 @@ aur:
         - zplug
         - miller
         - myrepos
-        - ctmg
+        # - ctmg
 
-ssh:
-    port: 22
-    # user_key: /root/id_rsa
-    enable_sshd: False
+# ssh:
+#     port: 22
+#     # user_key: /root/id_rsa
+#     enable_sshd: False
 
-gnupg:
-    enable_agent: True
-    emulate_ssh: True
+# gnupg:
+#     enable_agent: True
+#     emulate_ssh: True
 
-mail:
-    sync_tool: isync
-    sync_pim: True
-    sync_taskwarrior: True
-    sync_time: 5min
-    sync_boot_delay: 2min
-    sync_on: trusted
+# mail:
+#     sync_tool: isync
+#     sync_pim: True
+#     sync_taskwarrior: True
+#     sync_time: 5min
+#     sync_boot_delay: 2min
+#     sync_on: trusted
 
-network:
-    spoof_mac: True
-    conn_check:
-        interval: 0
-    trusted_uuid:
-        - b21284e6-01af-492f-8bea-45a69ef22a23
-        - 4ddd6988-aad1-4927-b650-ea7d24e0138b
-        - f9b3c62c-2d9f-450a-ac9b-528ba4c85ded
-        - b94375d1-70f8-424f-a6d7-dc52d0ab7288
-        - f74f2bd5-8748-4e1e-98f9-dae2dd44b916
-        - faeec88c-79ec-4840-ab25-ea356af8a81b
+# network:
+#     spoof_mac: True
+#     conn_check:
+#         interval: 0
+#     trusted_uuid:
+#         - b21284e6-01af-492f-8bea-45a69ef22a23
+#         - 4ddd6988-aad1-4927-b650-ea7d24e0138b
+#         - f9b3c62c-2d9f-450a-ac9b-528ba4c85ded
+#         - b94375d1-70f8-424f-a6d7-dc52d0ab7288
+#         - f74f2bd5-8748-4e1e-98f9-dae2dd44b916
+#         - faeec88c-79ec-4840-ab25-ea356af8a81b
 
-editors:
-    - gvim
+# editors:
+#     - gvim
 
-video_drivers:
-    - libva-intel-driver
+# video_drivers:
+#     - libva-intel-driver
 
 base_packages:
     - base-devel
@@ -72,138 +72,138 @@ base_packages:
     - coreutils
     - moreutils
     - dateutils
-    - reflector
-    - bc
-    - ranger
+    - reflector # update and sort pacman mirrorlist
+#     - bc
+#     - ranger
     - strace
     - lsof
     - sysstat
-    - arch-wiki-lite
-    - arch-wiki-docs
-    - python-keyring
-    - python-secretstorage
-    - fabric
+#     - arch-wiki-lite
+#     - arch-wiki-docs
+#     - python-keyring
+#     - python-secretstorage
+#     - fabric
     - tig
-    - ruby
-    - pv
-    - minicom
+#     - ruby
+#     - pv
+#     - minicom
     - jq
-    - python-docs
-    - python2-docs
-    - screen
+#     - python-docs
+#     - python2-docs
+#     - screen
     - units
 
-filesystem_packages:
-    - dosfstools
-    - hfsprogs
-    - ntfs-3g
-    - exfat-utils
+# filesystem_packages:
+#     - dosfstools
+#     - hfsprogs
+#     - ntfs-3g
+#     - exfat-utils
 
-browser_choices:
-    - firefox -P default
-    - firefox -P work
-    - firewarden chromium
-    - tor-browser-en
-    - play
-    - qcode
-    - "| xclip -selection c"
+# browser_choices:
+#     - firefox -P default
+#     - firefox -P work
+#     - firewarden chromium
+#     - tor-browser-en
+#     - play
+#     - qcode
+#     - "| xclip -selection c"
 
-passwordless_sudo:
-    - /usr/bin/openvpn*
+# passwordless_sudo:
+#     - /usr/bin/openvpn*
 
-tarsnapper:
-  deltas: 1h 1d 7d 30d 365d
-  period: DAILY
-  ac_only: True
-  run_on: trusted
-  random_delay: 600
+# tarsnapper:
+#   deltas: 1h 1d 7d 30d 365d
+#   period: DAILY
+#   ac_only: True
+#   run_on: trusted
+#   random_delay: 600
 
-gitannex:
-    stop_on_untrusted: True
+# gitannex:
+#     stop_on_untrusted: True
 
-bitlbee:
-    run_on: trusted
-    torify: True
+# bitlbee:
+#     run_on: trusted
+#     torify: True
 
-bootloader: grub
+# bootloader: grub
 
-postgresql:
-    enable: True
-    root: /home/postgres
+# postgresql:
+#     enable: True
+#     root: /home/postgres
 
-fingerprint: False
+# fingerprint: False
 
-tor:
-    run_on: trusted
+# tor:
+#     run_on: trusted
 
-localtime:
-    run_on: trusted
+# localtime:
+#     run_on: trusted
 
-nameservers:
-    - 8.8.8.8       # Google
-    - 209.244.0.3   # Level 3
-    - 74.82.42.42   # Hurricane Electric
+# nameservers:
+#     - 8.8.8.8       # Google
+#     - 209.244.0.3   # Level 3
+#     - 74.82.42.42   # Hurricane Electric
 
-bluetooth:
-    disable: False
+# bluetooth:
+#     disable: False
 
-firejail:
-    blacklist:
-        - ~/.calendars
-        - ~/.config/vdirsyncer
-        - ~/.contacts
-        - ~/.keys
-        - ~/.mbsyncrc
-        - ~/.offlineimap
-        - ~/.offlineimaprc
-        - ~/.password-store
-        - ~/.vdirsyncer
-        - ~/library/ledger
+# firejail:
+#     blacklist:
+#         - ~/.calendars
+#         - ~/.config/vdirsyncer
+#         - ~/.contacts
+#         - ~/.keys
+#         - ~/.mbsyncrc
+#         - ~/.offlineimap
+#         - ~/.offlineimaprc
+#         - ~/.password-store
+#         - ~/.vdirsyncer
+#         - ~/library/ledger
 
-cryptshot:
-    - name: alta
-      uuid: 0a0db776-84c5-48e1-9079-cacfbc5de8a3
-      keyfile: /home/pigmonkey/.keys/usb-alta.key
-      retain:
-        - level: daily
-          interval: 7
-        - level: weekly
-          interval: 6
-        - level: monthly
-          interval: 3
-    - name: bishorn
-      uuid: baeb40a2-b19e-4adc-8ef6-44ee720a4d1a
-      keyfile: /home/pigmonkey/.keys/usb-bishorn.key
-      retain:
-        - level: daily
-          interval: 7
-        - level: weekly
-          interval: 6
-        - level: monthly
-          interval: 3
-    - name: pilchuck
-      uuid: d96a0fc3-7ea1-42f7-b0d0-42e573c478bd
-      keyfile: /home/pigmonkey/.keys/usb-pilchuck.key
-      retain:
-        - level: daily
-          interval: 7
-        - level: weekly
-          interval: 6
-        - level: monthly
-          interval: 3
+# cryptshot:
+#     - name: alta
+#       uuid: 0a0db776-84c5-48e1-9079-cacfbc5de8a3
+#       keyfile: /home/pigmonkey/.keys/usb-alta.key
+#       retain:
+#         - level: daily
+#           interval: 7
+#         - level: weekly
+#           interval: 6
+#         - level: monthly
+#           interval: 3
+#     - name: bishorn
+#       uuid: baeb40a2-b19e-4adc-8ef6-44ee720a4d1a
+#       keyfile: /home/pigmonkey/.keys/usb-bishorn.key
+#       retain:
+#         - level: daily
+#           interval: 7
+#         - level: weekly
+#           interval: 6
+#         - level: monthly
+#           interval: 3
+#     - name: pilchuck
+#       uuid: d96a0fc3-7ea1-42f7-b0d0-42e573c478bd
+#       keyfile: /home/pigmonkey/.keys/usb-pilchuck.key
+#       retain:
+#         - level: daily
+#           interval: 7
+#         - level: weekly
+#           interval: 6
+#         - level: monthly
+#           interval: 3
 
-journal:
-    max_size: 500M
+# journal:
+#     max_size: 500M
 
-udisks:
-    auto_mount: False
-    shared_mount: True
+# udisks:
+#     auto_mount: False
+#     shared_mount: True
 
-hostsctl:
-    url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+# hostsctl:
+#     url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 
-himawaripy:
-    run_time: 15min
-    run_boot_delay: 2min
-    run_on: trusted
-    flags: --auto-offset --level 4
+# himawaripy:
+#     run_time: 15min
+#     run_boot_delay: 2min
+#     run_on: trusted
+#     flags: --auto-offset --level 4
