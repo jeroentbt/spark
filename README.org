@@ -1,36 +1,37 @@
-# Spark
+* Spark
 
-Spark is an [Ansible][1] playbook meant to provision a personal machine running
-[Arch Linux][2]. It is intended to run locally on a fresh Arch install (ie,
-taking the place of any [post-installation][3]), but due to Ansible's
-idempotent nature it may also be run on top of an already configured machine.
+Spark is an [[http://docs.ansible.com/ansible/latest/pacman_module.html][Ansible]] playbook meant to provision a personal machine running [[https://www.archlinux.org][Arch Linux]]. It is intended to run locally on a fresh Arch install (ie, taking the place of any [[https://wiki.archlinux.org/index.php/Installation_guide#Post-installation][post-installation]]), but due to Ansible's idempotent nature it may also be run on top of an already configured machine.
+Note: I have not run this as a fresh installer, it is more to document my current setup
 
-Spark assumes it will be run on a laptop and performs some configuration based
-on this assumption. This behaviour may be changed by removing the `laptop` role
+Spark assumes it will be run on a laptop and performs some configuration based on this assumption. This behaviour may be changed by removing the `laptop` role
 from the playbook or by skipping the `laptop` tag.
 
-If Spark is run on either a ThinkPad or a MacBook, it will detect this and
-execute platform-specific tasks.
+If Spark is run on either a ThinkPad or a MacBook, it will detect this and execute platform-specific tasks.
 
-## Running
+*  Running
 
 First, sync mirrors and install Ansible:
 
-    $ pacman -Syy python2-passlib ansible
+#+BEGIN_SRC shell
+  pacman -Syy python2-passlib ansible
+#+END_SRC
 
 Second, install and update the submodules:
 
-    $ git submodule init && git submodule update
-    
+#+BEGIN_SRC shell
+  git submodule init && git submodule update
+#+END_SRC
+
 Run the playbook as root.
 
-    # ansible-playbook -i localhost playbook.yml
+#+BEGIN_SRC shell
+  ansible-playbook -i localhost playbook.yml
+#+END_SRC
 
-When run, Ansible will prompt for the user password. This only needs to be
-provided on the first run when the user is being created. On later runs,
-providing any password -- whether the current user password or a new one --
-will have no effect.
 
+When run, Ansible will prompt for the user password. This only needs to be provided on the first run when the user is being created. On later runs, providing any password -- whether the current user password or a new one -- will have no effect.
+
+* TODO
 ## SSH
 
 By default, Ansible will attempt to install the private SSH key for the user. The
@@ -336,9 +337,8 @@ This can be changed by modifying the `himawaripy.run_time` variable.
 By completely removing the `himawaripy` variable, no related tasks will be run.
 
 
-[1]: http://www.ansible.com
-[2]: https://www.archlinux.org
-[3]: https://wiki.archlinux.org/index.php/Installation_guide#Post-installation
+[2]: 
+[3]: 
 [4]: https://wiki.archlinux.org/index.php/Secure_Shell#Managing_the_sshd_daemon
 [5]: https://thoughtbot.github.io/rcm/
 [6]: https://aur.archlinux.org

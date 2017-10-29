@@ -1,14 +1,16 @@
 user:
-    name: pigmonkey
+    name: jeroen
     uid: 1000
-    group: pigmonkey
+    group: jeroen
     shell: /usr/bin/zsh
-    email:  peter@havenaut.net
+    email:  jeroen@mailbox.org
     log:
         dir: log
         rotate: 8
 
-hostname: nous
+hostname: ein
+
+########################################
 
 dotfiles:
     url: git@github.com:pigmonkey/dotfiles.git
@@ -28,7 +30,7 @@ aur:
 
 ssh:
     port: 22
-    user_key: /root/id_rsa
+    # user_key: /root/id_rsa
     enable_sshd: False
 
 gnupg:
