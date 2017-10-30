@@ -54,5 +54,6 @@
       - ttf-caladea
       - ttf-courier-prime
       - ttf-heuristica
+      - nerd-fonts-complete
   tags:
     - aur

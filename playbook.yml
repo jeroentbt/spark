@@ -10,7 +10,7 @@
     # - { role: ssh, tags: ['ssh'] }
     # - { role: dotfiles, tags: ['dotfiles'] }
     - { role: ssd, tags: ['ssd'] }
-    # - { role: fonts, tags: ['fonts'] }
+    - { role: fonts, tags: ['fonts'] }
     # - { role: x, tags: ['x'] }
     # - { role: lightdm, tags: ['lightdm'] }
     # - { role: i3, tags: ['i3'] }
