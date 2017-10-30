@@ -1,0 +1,5 @@
+---
+- name: Install Franz chat app
+  aur: name=franz-bin user={{ user.name }}
+  tags:
+    - aur
