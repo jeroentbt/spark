@@ -6,7 +6,7 @@
     - battery
 
 - name: Install tpacpi-bat
-  aur: name=tpacpi-bat user={{ user.name }}
+  pacman: name=tpacpi-bat
   tags:
     - aur
     - battery

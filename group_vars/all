@@ -132,7 +132,7 @@ base_packages:
 #     enable: True
 #     root: /home/postgres
 
-# fingerprint: False
+fingerprint: False
 
 # tor:
 #     run_on: trusted
