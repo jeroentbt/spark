@@ -1,25 +1,21 @@
 ---
-- name: Install alsa-utils
-  pacman: name=alsa-utils state=present
-
 - name: Install PulseAudio
   pacman: name={{ item }} state=present
   with_items:
       - pulseaudio
       - pulseaudio-alsa
-      - pavucontrol
+      - lib32-libpulse
+      - lib32-alsa-plugins
 
 - name: Switch output to newly connected devices
   lineinfile: dest=/etc/pulse/default.pa
               state=present
               line="load-module module-switch-on-connect"
 
-- name: Install pasystray
-  aur: name=pasystray-gtk3-standalone user={{ user.name }}
-  tags:
-    - aur
-
-- name: Install pulseaudio-ctl
+- name: Install pulseaudio controls
   aur: name=pulseaudio-ctl user={{ user.name }}
+  with_items:
+    - pulseaudio-ctl
+    - pulsemixer
   tags:
     - aur
