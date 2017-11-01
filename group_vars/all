@@ -2,7 +2,7 @@ user:
     name: jeroen
     uid: 1000
     group: jeroen
-    shell: /bin/bash
+    shell: /usr/bin/zsh
     email:  jeroen@mailbox.org
     log:
         dir: log
