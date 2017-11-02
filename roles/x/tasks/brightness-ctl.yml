@@ -1,0 +1,6 @@
+---
+- name: Ensure brightness-ctl script is available
+  copy:
+    src: brightness-ctl
+    dest: /usr/local/bin/brightness-ctl
+    mode: 0755

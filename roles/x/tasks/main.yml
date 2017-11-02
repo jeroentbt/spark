@@ -5,6 +5,9 @@
 - name: Install Xinit
   pacman: name=xorg-xinit state=present
 
+- name: Install xinput, a tool to view and set (at runtime) options for input devices
+  pacman: name=xorg-xinput state=present
+
 - name: Install xmodmap
   pacman: name=xorg-xmodmap state=present
 
@@ -24,10 +27,10 @@
 - name: Add user to video group
   user: name={{ user.name }} groups=video append=yes
 
-- include: sxhkd.yml
-- include: unclutter.yml
-- include: autorandr.yml
-- include: srandrd.yml
-- include: termite.yml
-- include: autocutsel.yml
-- include: xdg.yml
+- include_tasks: unclutter.yml
+- include_tasks: autorandr.yml
+- include_tasks: srandrd.yml
+- include_tasks: termite.yml
+- include_tasks: autocutsel.yml
+- include_tasks: xdg.yml
+- include_tasks: brightness-ctl.yml

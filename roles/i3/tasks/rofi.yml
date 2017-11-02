@@ -3,8 +3,3 @@
   pacman: name=rofi state=present
   tags:
     - rofi
-
-- name: Install i3-wm for rofi window switching
-  pacman: name=i3-wm state=present
-  tags:
-    - rofi

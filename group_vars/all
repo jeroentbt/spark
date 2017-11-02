@@ -60,8 +60,8 @@ aur:
 # editors:
 #     - gvim
 
-# video_drivers:
-#     - libva-intel-driver
+video_drivers:
+    - libva-intel-driver
 
 base_packages:
     - base-devel

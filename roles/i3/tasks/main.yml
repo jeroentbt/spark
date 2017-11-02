@@ -2,8 +2,11 @@
 - name: Install i3
   pacman: name=i3 state=present
 
-- name: Install py3status
-  aur: name=py3status user={{ user.name }}
+- name: Install status app
+  aur: name={{ item }} user={{ user.name }}
+  with_items:
+    # - py3status
+    - i3blocks-git
   tags:
     - aur
 
@@ -20,4 +23,5 @@
   tags:
       - debug
 
-- include: rofi.yml
+- include_tasks: rofi.yml
+- include_tasks: i3blocks.yml

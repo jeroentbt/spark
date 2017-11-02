@@ -5,6 +5,8 @@
     - { role: base, tags: ['base'] }
     - { role: ssd, tags: ['ssd'] }
     - { role: fonts, tags: ['fonts'] }
+    - { role: x, tags: ['x'] }
+    - { role: i3, tags: ['i3'] }
     - { role: laptop, tags: ['laptop'] }
     - { role: thinkpad, tags: ['thinkpad'], when: "'ThinkPad' in ansible_product_version" }
     - { role: sound, tags: ['sound'] }
@@ -16,9 +18,7 @@
     # - { role: hardened, tags: ['hardened'] }
     # - { role: ssh, tags: ['ssh'] }
     # - { role: dotfiles, tags: ['dotfiles'] }
-    # - { role: x, tags: ['x'] }
     # - { role: lightdm, tags: ['lightdm'] }
-    # - { role: i3, tags: ['i3'] }
     # - { role: pass, tags: ['pass'] }
     # - { role: iptables, tags: ['iptables'] }
     # - { role: nettools, tags: ['nettools'] }

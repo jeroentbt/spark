@@ -1,0 +1,28 @@
+#!/bin/bash
+# brightness-ctl
+
+_help()
+{
+        echo
+        echo "Usage:"
+        echo "$0 +            Increments brightness by 0.5."
+        echo "$0 -            Decrements brightness by 0.5."
+}
+
+bright=$(xrandr --verbose | grep rightness | awk '{ print $2 }')
+DISP_NAME="eDP-1"
+INCR=0.05
+
+case $1 in
+    +) bright=$(echo "scale=2; $bright + $INCR" | bc)
+       [[ $(echo "$bright >= 1" | bc) -eq 1 ]] && bright=1
+       ;;
+    -) bright=$(echo "scale=2; $bright - $INCR" | bc)
+       [[ $(echo "$bright <= 0" | bc) -eq 1 ]] && bright=0
+       ;;
+    *) _help && exit ;;
+esac
+
+xrandr --output "$DISP_NAME" --brightness "$bright"   # See xrandr manpage.
+echo "Current brightness = $bright"
+exit
