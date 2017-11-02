@@ -12,6 +12,7 @@
     - { role: sound, tags: ['sound'] }
     - { role: spotify, tags: ['spotify'] }
     - { role: franz, tags: ['franz'] }
+    - { role: docker, tags: ['docker'] }
     # - { role: gnupg, tags: ['gnupg'] }
     # - { role: cron, tags: ['cron'] }
     # - { role: microcode, tags: ['microcode'], when: "'GenuineIntel' in ansible_processor" }
