@@ -8,6 +8,9 @@
       - xfce4-notifyd
       - gnome-keyring
 
+- name: Install networkmanager-dmenu
+  aur: name=networkmanager-cli-git user={{ user.name }}
+
 - name: Push trusted network list
   template: src=trusted_networks.j2 dest=/usr/local/etc/trusted_networks
 
