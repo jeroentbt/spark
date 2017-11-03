@@ -1,6 +1,9 @@
 ---
-- name: Install xdg-user-dirs
-  pacman: name=xdg-user-dirs state=present
+- name: Install xdg stuff
+  pacman: name={{ item }} state=present
+  with_items:
+    - xdg-user-dirs
+    - xdg-utils
   tags:
     - xdg
 
