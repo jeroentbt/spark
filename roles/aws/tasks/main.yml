@@ -1,0 +1,13 @@
+---
+- name: Install aws-cli
+  pacman: name=aws-cli state=present
+  tags:
+    - aws-cli
+
+- name: Install aws-cli wrappers
+  aur: name={{ item }} user={{ user.name }}
+  with_items:
+    - cli53
+    - awslogs
+  tags:
+    - aur
