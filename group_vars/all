@@ -20,7 +20,7 @@ hostname: ein
 aur:
     dir: aur
     packages:
-        - aura-bin
+        - pacaur
         - downgrade
         - overdue
         - zplug
