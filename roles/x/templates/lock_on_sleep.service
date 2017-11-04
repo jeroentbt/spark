@@ -1,0 +1,14 @@
+[Unit]
+Description=locks screen with xautolock or i3lock on suspend
+Before=sleep.target
+Before=suspend.target
+
+[Service]
+User={{ user.name }}
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/xautolock -locknow
+
+[Install]
+WantedBy=sleep.target
+WantedBy=suspend.target

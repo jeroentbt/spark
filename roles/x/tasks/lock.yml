@@ -1,0 +1,21 @@
+---
+- name: Install locker apps
+  pacman: name={{ item }} state=present
+  with_items:
+    - xautolock
+    - i3lock
+  tags:
+    - lock
+
+- name: Ensure service to lock on sleep is available
+  template:
+    src: lock_on_sleep.service
+    dest: /etc/systemd/system/lock_on_sleep.service
+  tags:
+    - lock
+
+- name: Ensure service to lock on sleep is enabled
+  service:
+    name: lock_on_sleep.service
+    enabled: true
+    state: started

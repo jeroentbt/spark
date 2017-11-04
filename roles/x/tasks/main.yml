@@ -34,3 +34,4 @@
 - include_tasks: autocutsel.yml
 - include_tasks: xdg.yml
 - include_tasks: brightness-ctl.yml
+- include_tasks: lock.yml
