@@ -91,7 +91,6 @@ base_packages:
 #     - python-docs
 #     - python2-docs
 #     - screen
-    - units
     - the_silver_searcher
 
 # filesystem_packages:
