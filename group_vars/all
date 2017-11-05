@@ -92,6 +92,7 @@ base_packages:
 #     - python2-docs
 #     - screen
     - the_silver_searcher
+    - editorconfig-core-c
 
 # filesystem_packages:
 #     - dosfstools
