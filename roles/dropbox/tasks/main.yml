@@ -1,0 +1,16 @@
+---
+- name: Install dropbox
+  aur: name={{ item }} user={{ user.name }}
+  with_items:
+    - dropbox
+    - dropbox-cli
+  tags:
+    - aur
+
+- name: Start dropbox on login
+  become: yes
+  become_user: "{{ user.name }}"
+  systemd:
+    name: dropbox
+    enabled: yes
+    user: yes
