@@ -4,3 +4,6 @@
   tags:
     - aur
     - autorandr
+
+- name: Install arandr
+  pacman: name=arandr state=present
