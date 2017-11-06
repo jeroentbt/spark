@@ -1,0 +1,6 @@
+---
+- name: Install dunst
+  pacman: name={{ item }} state=present
+  with_items:
+    - libnotify
+    - dunst

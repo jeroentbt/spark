@@ -16,6 +16,7 @@
     - { role: aws, tags: ['aws'] }
     - { role: dropbox, tags: ['dropbox'] }
     - { role: keepass, tags: ['keepass'] }
+    - { role: notifications, tags: ['notifications'] }
     # - { role: gnupg, tags: ['gnupg'] }
     # - { role: cron, tags: ['cron'] }
     # - { role: microcode, tags: ['microcode'], when: "'GenuineIntel' in ansible_processor" }
