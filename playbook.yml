@@ -9,6 +9,7 @@
     - { role: i3, tags: ['i3'] }
     - { role: laptop, tags: ['laptop'] }
     - { role: thinkpad, tags: ['thinkpad'], when: "'ThinkPad' in ansible_product_version" }
+    - { role: thinkpad-dock, tags: ['thinkpad-dock'] }
     - { role: sound, tags: ['sound'] }
     - { role: spotify, tags: ['spotify'] }
     - { role: franz, tags: ['franz'] }

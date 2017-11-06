@@ -1,0 +1,5 @@
+---
+- name: Install network drivers
+  aur: name=r8152-dkms user={{ user.name }}
+  tags:
+    - aur
