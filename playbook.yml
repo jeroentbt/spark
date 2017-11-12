@@ -20,6 +20,8 @@
     - { role: notifications, tags: ['notifications'] }
     - { role: go, tags: ['go'] }
     - { role: spell, tags: ['spell'] }
+    - { role: filesystems, tags: ['filesystems'] }
+    - { role: udisks, tags: ['udisks'] }
     # - { role: gnupg, tags: ['gnupg'] }
     # - { role: cron, tags: ['cron'] }
     # - { role: microcode, tags: ['microcode'], when: "'GenuineIntel' in ansible_processor" }
@@ -37,9 +39,7 @@
     # - { role: tor, tags: ['tor'], when: "tor is defined" }
     # - { role: unbound, tags: ['unbound'] }
     # - { role: editors, tags: ['editors'] }
-    # - { role: filesystems, tags: ['filesystems'] }
     # - { role: archive, tags: ['archive'] }
-    # - { role: udisks, tags: ['udisks'] }
     # - { role: browsers, tags: ['browsers'] }
     # - { role: yubikey, tags: ['yubikey'] }
     # - { role: media, tags: ['media'] }

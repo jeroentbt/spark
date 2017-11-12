@@ -94,11 +94,11 @@ base_packages:
     - the_silver_searcher
     - editorconfig-core-c
 
-# filesystem_packages:
-#     - dosfstools
-#     - hfsprogs
-#     - ntfs-3g
-#     - exfat-utils
+filesystem_packages:
+    - dosfstools
+    # - hfsprogs
+    - ntfs-3g
+    - exfat-utils
 
 # browser_choices:
 #     - firefox -P default
@@ -196,9 +196,9 @@ fingerprint: False
 # journal:
 #     max_size: 500M
 
-# udisks:
-#     auto_mount: False
-#     shared_mount: True
+udisks:
+    auto_mount: False
+    shared_mount: True
 
 # hostsctl:
 #     url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
