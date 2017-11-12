@@ -19,6 +19,7 @@
     - { role: keepass, tags: ['keepass'] }
     - { role: notifications, tags: ['notifications'] }
     - { role: go, tags: ['go'] }
+    - { role: spell, tags: ['spell'] }
     # - { role: gnupg, tags: ['gnupg'] }
     # - { role: cron, tags: ['cron'] }
     # - { role: microcode, tags: ['microcode'], when: "'GenuineIntel' in ansible_processor" }
@@ -39,7 +40,6 @@
     # - { role: filesystems, tags: ['filesystems'] }
     # - { role: archive, tags: ['archive'] }
     # - { role: udisks, tags: ['udisks'] }
-    # - { role: spell, tags: ['spell'] }
     # - { role: browsers, tags: ['browsers'] }
     # - { role: yubikey, tags: ['yubikey'] }
     # - { role: media, tags: ['media'] }
