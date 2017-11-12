@@ -1,0 +1,9 @@
+---
+- name: Install Go and devtools
+  pacman: name={{ item }} state=present
+  with_items:
+    - go
+    - go-tools
+
+- name: Ensure default GOPATH exists
+  file: dest=/home/{{ user.name }}/go state=directory
