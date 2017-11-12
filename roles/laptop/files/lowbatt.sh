@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CRITICAL=5
-LOW=12
+CRITICAL=3
+LOW=6
 VERBOSE=false
 
 usage() {
