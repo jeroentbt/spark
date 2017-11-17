@@ -31,6 +31,8 @@ Run the playbook as root.
 
 When run, Ansible will prompt for the user password. This only needs to be provided on the first run when the user is being created. On later runs, providing any password -- whether the current user password or a new one -- will have no effect.
 
+* Enable thunderbolt dock hotplugging
+Add =CONFIG_HOTPLUG_PCI=y CONFIG_HOTPLUG_PCI_ACPI=y= as boot parameters.
 * TODO
 ## SSH
 
